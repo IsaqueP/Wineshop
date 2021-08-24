@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+ 
+     <!-- styles -->
+     <link rel="stylesheet" href="style.css">
+ 
+    <!-- icon na aba do navegador -->
+    <link rel="shortcut icon" href="assets/icons/icon-flaticon.png" type="image/">
+
+
+    <title>Wineshop</title>
+</head>
+<body class='body'>
+    
+    <!-- header -->
+    <header id='header'>
+
+        <!-- logo -->
+        <div id='containerLogoHeader'>
+            <a id='logoHeader' href="#">Wineshop</a>
+            <img id='iconLogoHeader' src="assets/imgs/icon-wine.png" alt="icon da logo">
+        </div>
+        
+
+        <!-- categorias -->
+        <nav class='categoriesHeader'>
+            <ul class='menu'>
+                <li>Tipos de vinho</li>
+                <li>Uvas</li>
+                <li>Países</li>
+                <li>Sidra</li>
+            
+            </ul>
+        </nav>
+
+        <!-- icons -->
+        <div class='iconsHeader'>
+
+            <!-- menu hamburger -->
+            <div class="menu-toggle" onclick="menuMobile()" >
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+
+            <!-- conjunto de icons do Header -->
+            <div class="iconsContainer">
+                <div class="iconHeaderOne">
+                    <img src="assets/icons/icon-user.svg" alt="login">
+                    <span>Login</span>
+                </div>
+                <div class="iconHeaderTwo">
+                    <img src="assets/icons/icon-carrinho.png" alt="carrinho de compra">
+                    <img src="assets/icons/icon-lupa-branca.png" class='lupaHeader' onclick="modal()" alt="lupa de pesquisa">
+                </div>
+            </div>
+            
+            <nav class='menuMobile'>
+                <ul>
+                    <li>
+                        <img src="assets/icons/icon-user.svg" alt="user">
+                        Login
+                    </li>
+                    <li>Tipos de vinho</li>
+                    <li>Uvas</li>
+                    <li>Países</li>
+                    <li>Sidra</li>
+                    
+                </ul>
+            </nav>
+            
+        </div>                
+    </header>
+
+    <!-- Main -->
+    <main id='main'>
+
+        <!-- Menu lateral -->
+        <div id="lateralMenu">
+            
+
+            <nav class="lateralMenu">
+                <ul class='navCategory'>             
+                    <h3>Tipos de vinho</h3>
+                    <li>Branco</li>
+                    <li>Destilado</li>
+                    <li>Espumante</li>
+                    <li>Orgânico</li>
+                    <li>Promoção</li>
+                    <li>Rosé</li>
+                    <li>Tinto</li>
+                </ul>
+                
+                <ul class='navCategory'>             
+                    <h3>Uvas</h3>
+                    <li>Alvarinho</li>
+                    <li>Arinto</li>
+                    <li>Barbera</li>
+                    <li>Malbec</li>
+                    <li>Merlot</li>
+                    <li>Moscatel</li>
+                    <li>Moscato</li>
+                </ul>
+                
+                <ul class='navCategory'>
+                    <h3>Preços</h3>
+                    <div class="priceFilter">
+                        <div class="priceFilterMinMax">
+                            <span>R$</span>
+                            <input type="number" placeholder="min.">
+                        </div>
+                        <div class="priceFilterMinMax">
+                            <span>R$</span>
+                            <input type="number" placeholder="max.">
+                        </div>
+                    </div>
+                    <button onclick="filter()">Aplicar</button>
+                </ul>
+    
+                <ul class='navCategory'>
+                    <h3>Países</h3>
+                    <li>Brasil</li>
+                    <li>Africa do Sul</li>
+                    <li>Argentina</li>
+                    <li>Chile</li>
+                    <li>Espanha</li>
+                    <li>Estados Unidos</li>
+                    <li>França</li>
+                    <li>Itália</li>
+                    <li>Portugal</li>
+                    <li>Uruguai</li>
+                </ul>
+
+                <ul class='navCategory'>
+                    <li>
+                        <span class='closeMenu' onclick="filter()">
+                            <img src="assets/icons/icon-close-preto.png" alt="">
+                        </span>
+                    </li>
+                </ul>
+                
+            </nav>
+        </div>
+      
+
+        <div id='banner'>
+            <img src="assets/imgs/banner6.jpg" alt="Banner de promoção">  
+        </div>
+
+        <div id='products'>
+
+            <header>
+                <div class="icons">
+                    <div class="filter" onclick="filter()">
+                        <img src="assets/icons/icon-filter.png" alt="filtrar">
+                        <span>Filtrar</span>
+                    </div>
+                    <div class="grid">
+                        <div class="iconGrid">
+                            <div class="one"></div>
+                            <div class="two"></div>
+                            <div class="three"></div>
+                            <div class="four"></div>
+                        </div>
+                        <span>Grid</span>
+                    </div>
+                    <div class="list">
+                        <div class="iconList">
+                            <div class="one"></div>
+                            <div class="two"></div>
+                            <div class="three"></div>
+                        </div>
+                        <span>List</span>
+                    </div>
+                </div>
+                
+                <div class="pagination">
+                    <ul>
+                        <li>
+                            <span>
+                                <img src="assets/icons/icon-arrow-left.png" alt="voltar página">
+                            </span>
+                        </li>
+                        <li class='on'>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>
+                            <span>
+                                <img src="assets/icons/icon-arrow-right.png" alt="avançar página\">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <main>
+
+                
+            </main>
+
+            <footer>
+                <div class="pagination">
+                    <ul>
+                        <li>
+                            <span>
+                                <img src="assets/icons/icon-arrow-left.png" alt="voltar página">
+                            </span>
+                        </li>
+                        <li class='on'>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>
+                            <span>
+                                <img src="assets/icons/icon-arrow-right.png" alt="avançar página\">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+
+        </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer id='footer'>
+
+        <div class="footerContainer">
+            <h3>Entre em contato</h3>
+            <div>
+                <span><img src="assets/icons/icon-local.png" alt=""></span>
+                <span>São Paulo, Carapicuíba</span>
+            </div>
+            <div>
+                <img src="assets/icons/icon-telefone.png" alt="">
+                <span>11 91234-1234</span>
+            </div>
+            <div>
+                <img src="assets/icons/icon-email.png" alt="">
+                <span>contato@wineshop.com</span>
+            </div>
+        </div>
+
+        <div class="footerContainer">
+            <h3>Atendimento ao cliente</h3>
+            <ul>
+                <li>Minha conta</li>
+                <li>Histórico de pedidos</li>
+                <li>FAQ</li>
+                <li>Central de ajuda</li>
+                <li>Especiais</li>
+            </ul>
+        </div>
+
+        <div class="footerContainer">
+            <h3>Corporação</h3>
+            <ul>
+                <li>Sobre nós</li>
+                <li>Atendimento ao cliente</li>
+                <li>Empresa</li>
+                <li>Relações com investidores</li>
+                <li>Pesquisa avançada</li>
+            </ul>
+        </div>
+
+        <div class="footerContainer">
+            <h3>Porque escolher nós</h3>
+            <ul>
+                <li>Guia de compra</li>
+                <li>Blog</li>
+                <li>Empresa</li>
+                <li>Relações com investidores</li>
+                <li>Entre em contato</li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <!-- Modal -->
+    <div class="modal-overlay">
+        <!--Área do conteúdo-->
+        <div class="containerModal">
+            <div>
+                <h2>Podemos te ajudar?</h2>
+            </div>
+            <div class='contSearchModal'>
+                <span class='lupaModal'><img src="assets/icons/icon-lupa-preta.png" onclick='modal()' alt="lupa"></span>
+                <input type="text" placeholder="BUSCAR" >
+            </div>
+            <div class='closeModal'>
+                <span class='spanCloseModal' onclick="modal()"><img src="assets/icons/icon-close.png" alt="X"></span>
+            </div>
+        </div>
+    </div>
+
+    <pre><script src="api.js"></script></pre>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
+<!DOCTYPE html>

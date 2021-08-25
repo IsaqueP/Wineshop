@@ -4,7 +4,7 @@
 
 https://wineshop-isaque.netlify.app/
 
-Wineshop é uma projeto web desenvolvido de um e-commerce de vinhos
+Wineshop é um projeto web desenvolvido de um e-commerce de vinhos
 
 
 ## Layout web

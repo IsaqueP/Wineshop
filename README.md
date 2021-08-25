@@ -7,6 +7,8 @@ https://wineshop-isaque.netlify.app/
 Wineshop é um projeto web desenvolvido de um e-commerce de vinhos
 
 
+É necessário usar o [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) para conseguir conectar na API
+
 ## Layout web
 ![Web 1](https://github.com/IsaqueP/Wineshop/blob/main/assets/Screenshots/Screenshot%20-%20Web.png)
 
